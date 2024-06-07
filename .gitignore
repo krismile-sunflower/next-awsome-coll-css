@@ -25,6 +25,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# vscode配置文件
+.vscode
+
 # local env files
 .env*.local
 

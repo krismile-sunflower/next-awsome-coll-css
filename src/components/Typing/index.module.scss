@@ -1,0 +1,25 @@
+.container {
+    .title {
+        font: bold 200% Consolas, Monaco, monospace;
+        // font-family: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+        width: 26ch;
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(26, end) forwards,
+            cursor-blink 0.5s step-end infinite alternate 3s;
+    }
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor-blink {
+    50% {
+        border-color: transparent;
+    }
+}

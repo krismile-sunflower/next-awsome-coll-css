@@ -1,0 +1,25 @@
+@property --houdini-colorA {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #fff;
+}
+@property --houdini-colorB {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #000;
+}
+.container {
+    width: var(--w);
+    height: var(--h);
+    border-radius: 20px;
+    background: linear-gradient(45deg, var(--houdini-colorA), var(--houdini-colorB));
+    transition:
+        1s --houdini-colorA,
+        1s --houdini-colorB;
+
+    &:hover {
+        cursor: pointer;
+        --houdini-colorA: yellowgreen;
+        --houdini-colorB: deeppink;
+    }
+}

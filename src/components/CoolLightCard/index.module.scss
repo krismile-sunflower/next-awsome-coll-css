@@ -1,0 +1,53 @@
+ $pic: url("../../assets/hutao.jpg");
+
+ .container {
+     position: relative;
+     width: 1000px;
+     height: 500px;
+     border-radius: 20px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+
+     &::after {
+         content: '';
+         position: absolute;
+         border-radius: 20px;
+         width: calc(100% - 60px);
+         height: calc(100% - 60px);
+         background: $pic;
+         background-size: cover;
+         z-index: 5;
+         inset: 30px;
+     }
+
+     .fillter {
+          position: absolute;
+          inset: 0px;
+          overflow: hidden;
+          border-radius: 20px;
+
+          &::before {
+              content: '';
+              position: absolute;
+              inset: 0px;
+              background: $pic;
+              background-size: cover;
+              z-index: 2;
+              filter: blur(10px);
+              cursor: pointer;
+          }
+     }
+
+     .image {
+         position: absolute;
+         inset: 0px;
+         border-radius: 30px;
+         background: conic-gradient(#03a9f4, #e91e63, #9c27b0, #ff5722, #03a9f4);
+         mask: radial-gradient(circle at var(--x) var(--y),
+                 #000,
+                 #000,
+                 transparent,
+                 transparent,
+                 transparent);
+     }
+ }

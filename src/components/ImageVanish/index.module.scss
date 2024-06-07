@@ -1,0 +1,85 @@
+$pic: url("../../assets/hutao.jpg");
+
+$count: 400;
+$sqrt: 20;
+$per: 100% / $sqrt;
+$width: 300px;
+$perWid: 15;
+
+@for $i from 1 to ($count + 1) {
+    @property --m-#{$i} {
+        syntax: "<number>";
+        initial-value: 1;
+        inherits: false;
+    }
+}
+@function bgSet($n) {
+    $bg: radial-gradient(rgba(0, 0, 0, var(--m-1)), rgba(0, 0, 0, var(--m-1)));
+
+    @for $i from 2 through $n {
+        $bg: $bg, radial-gradient(rgba(0, 0, 0, var(--m-#{$i})), rgba(0, 0, 0, var(--m-#{$i})));
+    }
+
+    @return $bg;
+}
+@function positionSet($n) {
+    $bgPosition: ();
+
+    @for $i from 0 through ($n) {
+        @for $j from 0 through ($n - 1) {
+            $bgPosition:
+                $bgPosition,
+                #{$i * $perWid}px #{$j * $perWid}px;
+        }
+    }
+
+    @return $bgPosition;
+}
+@function transitionSet($n) {
+    $transition: --m-1 0.1s 0.1s;
+
+    @for $i from 1 through $n {
+        $transition:
+            $transition,
+            --m-#{$i} #{random(500)}ms #{random(500)}ms;
+    }
+
+    @return $transition;
+}
+.vanish {
+    width: $width;
+    height: $width;
+    background: $pic;
+    mask: bgSet($count);
+    mask-size: $per $per;
+    mask-repeat: no-repeat;
+    mask-position: positionSet($sqrt);
+    transition: transitionSet($count);
+
+    &:hover {
+        cursor: pointer;
+        @for $i from 1 through $count {
+            --m-#{$i}: 0;
+        }
+    }
+}
+
+.retation {
+    width: $width;
+    height: $width;
+    background: $pic;
+    mask: bgSet($count);
+
+    &:hover {
+        cursor: pointer;
+        animation: maskRotate 1s ease-in-out; //
+    }
+}
+
+@keyframes maskRotate {
+    @for $i from 0 through 100 {
+        #{$i}% {
+            mask: conic-gradient(#000 #{$i - 10 + "%"}, transparent #{$i + "%"}, transparent);
+        }
+    }
+}
