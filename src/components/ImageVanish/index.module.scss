@@ -78,7 +78,7 @@ $perWid: 15;
 
 @keyframes maskRotate {
     @for $i from 0 through 100 {
-        #{$i}% {
+        #{$i + '%'} {
             mask: conic-gradient(#000 #{$i - 10 + "%"}, transparent #{$i + "%"}, transparent);
         }
     }

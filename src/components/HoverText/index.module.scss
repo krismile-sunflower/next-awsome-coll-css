@@ -1,0 +1,13 @@
+.text {
+    font-size: large;
+    background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
+    background-size: 0 3px; // 设置背景宽度为0，高度为3px
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s;
+    &:hover {
+        cursor: pointer;
+        background-size: 100% 3px;
+        color: yellowgreen;
+    }
+}

@@ -9,17 +9,9 @@
     initial-value: #000;
 }
 .container {
-    width: var(--w);
-    height: var(--h);
+    width: 300px;
+    height: 200px;
     border-radius: 20px;
-    background: linear-gradient(45deg, var(--houdini-colorA), var(--houdini-colorB));
-    transition:
-        1s --houdini-colorA,
-        1s --houdini-colorB;
-
-    &:hover {
-        cursor: pointer;
-        --houdini-colorA: yellowgreen;
-        --houdini-colorB: deeppink;
-    }
+    background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }

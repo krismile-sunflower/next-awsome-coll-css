@@ -1,4 +1,6 @@
 import CoolLightCard from "@/components/CoolLightCard";
+import HoverText from "@/components/HoverText";
+import ImageText from "@/components/ImageText";
 import ImageVanish from "@/components/ImageVanish";
 import Test from "@/components/Test";
 import Typing from "@/components/Typing";
@@ -10,6 +12,10 @@ export default function Home() {
       <Typing />
       <ImageVanish />
       <Test />
+      <ImageText />
+      <HoverText />
+
+
     </main>
   );
 }
