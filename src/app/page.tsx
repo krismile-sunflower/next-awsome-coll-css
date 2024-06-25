@@ -1,3 +1,4 @@
+import BorderAnimation from "@/components/BorderAnimation";
 import CoolLightCard from "@/components/CoolLightCard";
 import HoverText from "@/components/HoverText";
 import ImageText from "@/components/ImageText";
@@ -14,8 +15,7 @@ export default function Home() {
       <Test />
       <ImageText />
       <HoverText />
-
-
+      <BorderAnimation />
     </main>
   );
 }

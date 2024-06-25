@@ -1,0 +1,54 @@
+.box {
+    // display: none; /* 默认不显示 */
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    // box-shadow: 0 0 10px transparent;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in forwards;
+    .success {
+        background-color: #1b96ea;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .error {
+        @extend .success;
+        background-color: red;
+        color: #fff;
+    }
+    .warning {
+        @extend .success;
+        background-color: orange;
+        color: #fff;
+    }
+    .info {
+        @extend .success;
+        background-color: gray;
+        color: #fff;
+    }
+
+}
+
+.out {
+   @extend .box;
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
