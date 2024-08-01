@@ -1,8 +1,11 @@
 import BorderAnimation from "@/components/BorderAnimation";
 import CoolLightCard from "@/components/CoolLightCard";
+import FoldMenu from "@/components/FoldMenu";
 import HoverText from "@/components/HoverText";
 import ImageText from "@/components/ImageText";
 import ImageVanish from "@/components/ImageVanish";
+import NeonLights from "@/components/NeonLights";
+import ShadowButton from "@/components/ShadowButton";
 import Test from "@/components/Test";
 import Typing from "@/components/Typing";
 
@@ -16,6 +19,9 @@ export default function Home() {
       <ImageText />
       <HoverText />
       <BorderAnimation />
+      <FoldMenu />
+      <ShadowButton />
+      <NeonLights />
     </main>
   );
 }
