@@ -1,4 +1,3 @@
-import { NextResponse } from "next/server";
 
 export const maxDuration = 60; // This function can run for a maximum of 60 seconds (update at 2024-05-09 form 10 seconds)
 export const dynamic = "force-dynamic";
@@ -45,7 +44,7 @@ export async function GET() {
     console.log("🚀 ~ GET ~ address:", address)
 
     await browser.close();
-    return new NextResponse({
+    return Response.json({
         temperature,
         status,
         weather,
@@ -53,5 +52,5 @@ export async function GET() {
         wind,
         humidity,
         address,
-    }, { status: 200 });
+      }, { status: 200 })
 }
