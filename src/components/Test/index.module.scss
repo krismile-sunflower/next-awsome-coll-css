@@ -9,9 +9,34 @@
     initial-value: #000;
 }
 .container {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    input {
+        border: none;
+        border-radius: 5px;
+        padding: 10px 5px;
+        inset-inline: 0;
+        color: black;
+        outline: none;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 10px;
+        background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
+    }
+
+    .box {
+        
+        display: flex;
+        gap: 3;
+        img {
+           width: 40px;
+           height: 40px;
+        }
+    }
+    // width: 300px;
+    // height: 200px;
+    // border-radius: 20px;
+    // background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
+    // clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }

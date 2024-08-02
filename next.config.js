@@ -4,6 +4,12 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
+    experimental: {
+        serverComponentsExternalPackages: [
+            '@sparticuz/chromium-min',
+            'puppeteer-core',
+        ]
+    }
 };
 
 module.exports = nextConfig

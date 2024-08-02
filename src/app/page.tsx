@@ -15,13 +15,13 @@ export default function Home() {
       <CoolLightCard />
       <Typing />
       <ImageVanish />
-      <Test />
       <ImageText />
       <HoverText />
       <BorderAnimation />
       <FoldMenu />
       <ShadowButton />
       <NeonLights />
+      <Test />
     </main>
   );
 }
