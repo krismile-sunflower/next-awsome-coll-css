@@ -45,5 +45,13 @@ export async function GET() {
     console.log("🚀 ~ GET ~ address:", address)
 
     await browser.close();
-    return new NextResponse('Hello World!', { status: 200 });
+    return new NextResponse({
+        temperature,
+        status,
+        weather,
+        text,
+        wind,
+        humidity,
+        address,
+    }, { status: 200 });
 }
